@@ -1,24 +1,15 @@
 {
     "version": 2,
-    "public": true,
     "builds": [
       {
-        "src": "./server.js",
+        "src": "server.js", 
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/user/login",
-        "dest": "/"
-      },
-      {
-        "src": "/api/user/signup",
-        "dest": "/"
-      },
-      {
-        "src": "/api/user/allprods",
-        "dest": "/"
+        "src": "/(.*)",
+        "dest": "server.js"
       }
     ]
   }
